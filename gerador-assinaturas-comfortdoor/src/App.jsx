@@ -1,4 +1,4 @@
-﻿import React, { useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { DEFAULT_CONFIG } from './defaultConfig';
 import { generateSignatureHtml } from './utils/generateSignatureHtml';
 import './App.css';
@@ -88,7 +88,7 @@ export default function App() {
       formData.imagens.logoUrl,
       formData.imagens.bannerUrl,
       formData.imagens.iconeInstagramUrl,
-      formData.imagens.iconeFacebookUrl,
+      formData.imagens.iconeTiktokUrl,
       formData.imagens.iconeLinkedinUrl,
       formData.imagens.iconeYoutubeUrl
     ].filter(Boolean);
@@ -158,7 +158,7 @@ export default function App() {
                   <input type="text" value={formData.colaborador.cargo} onChange={e => handleChange('colaborador', 'cargo', e.target.value)} />
                 </div>
                 <div className="form-group">
-                  <label>Telefone / Ramal</label>
+                  <label>Telefone / WhatsApp</label>
                   <input type="text" value={formData.colaborador.telefone} onChange={e => handleChange('colaborador', 'telefone', e.target.value)} />
                 </div>
                 <div className="form-group">
@@ -188,8 +188,8 @@ export default function App() {
                   <input type="url" value={formData.links.instagramUrl} onChange={e => handleChange('links', 'instagramUrl', e.target.value)} />
                 </div>
                 <div className="form-group">
-                  <label>Facebook URL</label>
-                  <input type="url" value={formData.links.facebookUrl} onChange={e => handleChange('links', 'facebookUrl', e.target.value)} />
+                  <label>TikTok URL</label>
+                  <input type="url" value={formData.links.tiktokUrl} onChange={e => handleChange('links', 'tiktokUrl', e.target.value)} />
                 </div>
                 <div className="form-group">
                   <label>LinkedIn URL</label>
@@ -219,8 +219,8 @@ export default function App() {
                     <input type="url" value={formData.imagens.iconeInstagramUrl} onChange={e => handleChange('imagens', 'iconeInstagramUrl', e.target.value)} />
                   </div>
                   <div className="form-group">
-                    <label>Ícone Facebook</label>
-                    <input type="url" value={formData.imagens.iconeFacebookUrl} onChange={e => handleChange('imagens', 'iconeFacebookUrl', e.target.value)} />
+                    <label>Ícone TikTok</label>
+                    <input type="url" value={formData.imagens.iconeTiktokUrl} onChange={e => handleChange('imagens', 'iconeTiktokUrl', e.target.value)} />
                   </div>
                 </div>
                 <div className="grid-2col">
